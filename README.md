@@ -36,7 +36,21 @@ Efficient winners have a distinct offensive identity that differs from big-budge
 
 They don't out-slug anyone. They put the ball in play and run. This makes economic sense: contact skills and speed are cheaper to acquire than 40-homer power bats.
 
-### 3. Stars AND Depth, Not One or the Other
+### 3. Defense Is the Cheap Edge
+
+Defense accounts for **29% of the total runs gap** between efficient winners and cheap losers (+24.4 defensive runs/year, p=0.006). Among bottom-third payroll teams, defensive runs correlate with wins at r=0.614, stronger than in the middle tier (r=0.488) or top tier (r=0.352). Defense matters more when you can't outspend the problem.
+
+|  | Efficient Winners | Cheap Losers | Big-Budget Winners |
+|--|:-:|:-:|:-:|
+| Defensive runs/yr | **+15.9** | -8.6 | +9.0 |
+| Good gloves (def >= +5) | 4.4/roster | 3.4/roster | 4.1/roster |
+| Bad gloves (def <= -5) | 3.6/roster | 4.6/roster | 3.5/roster |
+
+Efficient winners carry **one more good glove and one fewer bad glove** per roster than cheap losers (both p < 0.03). The extreme cases tell the story: Cleveland 2022 had +70 defensive runs and won 92 games on $68M. Oakland 2023 had -67 defensive runs and won 50. Among cheap teams, the best defensive teams are almost all winners; the worst are all losers.
+
+This makes economic sense. Defensive skill is cheaper to acquire than offensive production. You can't buy a 30-HR bat on a budget, but you can prioritize players who field their position.
+
+### 4. Stars AND Depth, Not One or the Other
 
 Efficient winners average 2.4 players at 4+ WAR per year (cheap losers: 0.9) AND 5.9 players in the 2-4 WAR tier (cheap losers: 4.3). The "stars vs. depth" framing is a false dichotomy. These teams develop elite talent and supplement with solid contributors.
 
@@ -51,7 +65,7 @@ The Angels are the inverse of the efficient winner profile on every dimension:
 | Team K% (batting) | 25.5% | 21.3% | 93rd (bad) |
 | Pitching BB% | 9.7% | 8.1% | 91st (bad) |
 
-High-strikeout offense, walk-heavy pitching staff, no bullpen depth. The opposite of what works on a budget.
+High-strikeout offense, walk-heavy pitching staff, no bullpen depth. Defensively, Zach Neto has been elite (+18 to +20 def runs/year since 2024) but the rest of the roster has been a sieve: 5-6 bad gloves in 2025-2026, netting -26 and -33 total defensive runs. The opposite of what works on a budget.
 
 ## Methodology
 
@@ -135,6 +149,7 @@ python deep_dive.py
 python deep_dive2.py
 python deep_dive_relievers.py
 python deep_dive_sticky.py
+python deep_dive_lineup.py
 ```
 
 `bwar_batting.csv` and `bwar_pitching.csv` are gitignored (18MB combined, full historical database). Run `pull_player_stats.py` to regenerate them.
