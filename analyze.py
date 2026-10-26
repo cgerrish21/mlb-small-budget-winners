@@ -246,7 +246,7 @@ def main():
     # Build ranking rows
     for row in comparison_rows:
         g_val = row["hedges_g"]
-        if not np.isnan(g_val) if isinstance(g_val, float) else g_val is not np.nan:
+        if pd.notna(g_val):
             ranking_rows.append({
                 "metric": row["metric"],
                 "column": row["column"],

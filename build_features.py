@@ -36,8 +36,9 @@ def gini_coefficient(values):
     values = values[~np.isnan(values)]
     if len(values) == 0:
         return np.nan
-    # Shift negative values: Gini requires non-negative inputs
-    # Shifting preserves relative dispersion
+    # Shift negative values: Gini requires non-negative inputs.
+    # Note: shifting changes the Gini value vs. a positive-only subset,
+    # but is standard practice for WAR distributions with negative values.
     if values.min() < 0:
         values = values - values.min()
     values = np.sort(values)
@@ -167,19 +168,6 @@ def compute_war_distribution(bwar_bat, bwar_pit, years):
 
     return pd.DataFrame(results)
 
-
-def compute_age_profile(bwar_bat, bwar_pit, years):
-    """WAR-weighted average age per team-season."""
-    frames = []
-    for df in [bwar_bat, bwar_pit]:
-        if df is None:
-            continue
-        # bwar data doesn't have Age directly, but we can compute from birth year
-        # or skip if not available. BRef individual data has Age.
-        # For now, skip age from bwar and compute from BRef individual data.
-        pass
-
-    return None  # Will compute from BRef data below
 
 
 def compute_age_from_bref(player_bat_bref, player_pit_bref, years):
@@ -442,8 +430,11 @@ def main():
 
     # --- WAR per dollar (efficiency) ---
     if "total_team_war" in master.columns:
-        master["war_per_10mm"] = (master["total_team_war"] /
-                                  (master["payroll_mm"] / 10)).round(3)
+        master["war_per_10mm"] = np.where(
+            master["payroll_mm"] > 0,
+            (master["total_team_war"] / (master["payroll_mm"] / 10)).round(3),
+            np.nan
+        )
 
     # Save
     out = os.path.join(DATA_DIR, "master.csv")
