@@ -8,6 +8,23 @@ A data-driven analysis of roster construction strategies across 150 MLB team-sea
 
 Efficient winners get **40% of their pitching WAR from relievers**, compared to 31.5% for both cheap losers and big-budget winners. The bullpen WAR gap (3.3 WAR/year) is nearly as large as the rotation gap (2.9 WAR/year). This is the Rays/Guardians model: convert starters to high-leverage relief roles, use openers, treat the bullpen as a strategic weapon rather than an afterthought.
 
+**What makes a good reliever findable on a budget?** A stickiness analysis of 50+ Statcast metrics across 1,516 reliever-seasons (735 year-over-year pairs) tested which metrics are both repeatable and predictive of next-year WAR:
+
+| Metric | Same-Year r | Stickiness (YoY r) | Predictive r | Q5-Q1 WAR Gap |
+|--------|:-----------:|:------------------:|:------------:|:-------------:|
+| K% | 0.394 | 0.560 | **0.229** | +0.64 WAR |
+| Put-Away% | 0.344 | 0.344 | **0.189** | +0.55 WAR |
+| Whiff% | 0.289 | 0.659 | **0.184** | +0.44 WAR |
+| FB Velocity | 0.174 | 0.938 | 0.167 | +0.52 WAR |
+| Hard Hit% | -0.236 | 0.236 | -0.026 | -- |
+| Pitch Mix | <0.05 | ~0.88 | <0.10 | -- |
+
+**K%, whiff%, and put-away% are the three actionable scouting metrics.** They predict future WAR and are repeatable enough to scout for. Velocity is extremely stable year-to-year (it's a physical trait) but only weakly predictive by itself. Hard hit rate and pitch mix are essentially useless for projecting relievers. Outcome metrics like wOBA against have the highest same-year correlations with WAR (r=-0.71) but are not sticky (r=0.14); the luck component doesn't repeat.
+
+Top-quintile K% relievers average **1.04 WAR** the following year vs. 0.40 for bottom-quintile. Whiff% shows a clean monotonic trend across all five quintiles. These are true skills, not noise.
+
+*Note: survivorship bias is present (only relievers who appeared in consecutive years are included), which likely understates the true predictive power of these metrics.*
+
 ### 2. Contact and Speed Over Power
 
 Efficient winners have a distinct offensive identity that differs from big-budget teams:
@@ -116,6 +133,8 @@ python visualize.py
 # Deep dives
 python deep_dive.py
 python deep_dive2.py
+python deep_dive_relievers.py
+python deep_dive_sticky.py
 ```
 
 `bwar_batting.csv` and `bwar_pitching.csv` are gitignored (18MB combined, full historical database). Run `pull_player_stats.py` to regenerate them.
