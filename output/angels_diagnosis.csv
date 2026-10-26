@@ -1,0 +1,16 @@
+metric,column,angels_mean,ew_mean,gap,percentile
+Wins,W,68.6,89.929,-21.329,15.3
+Total Team WAR,total_team_war,23.4,39.307,-15.907,17.3
+Players with 2+ WAR,players_2plus_war,5.4,8.286,-2.886,28.7
+Pitching K%,pit_K%,0.217,0.231,-0.014,32.0
+Batting WAR (bWAR),bat_WAR,12.44,23.2,-10.76,24.0
+WHIP,pit_WHIP,1.358,1.243,0.116,80.7
+WAR per $10M,war_per_10mm,1.471,5.28,-3.809,18.0
+K/9,pit_K/9,8.448,8.751,-0.303,38.7
+Team ERA,pit_ERA,4.448,3.909,0.539,74.7
+Team FIP,pit_FIP,4.462,3.966,0.496,82.7
+Pitching WAR (bWAR),pit_WAR,10.92,16.121,-5.201,34.0
+BB/9,pit_BB/9,3.788,3.051,0.737,90.0
+Home Runs,bat_HR,186.8,186.845,-0.045,54.0
+Team K%,bat_K%,0.255,0.213,0.042,92.7
+Pitching BB%,pit_BB%,0.097,0.081,0.017,91.3

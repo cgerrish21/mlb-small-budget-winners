@@ -1,0 +1,35 @@
+metric,column,hedges_g,abs_g,g_ci_lo,g_ci_hi,p_value,q_value,is_redundant,direction,ew_mean,cl_mean,gap
+Wins,W,2.234,2.234,1.472,2.996,0.0,,True,EW higher,89.929,70.306,19.623
+Total Team WAR,total_team_war,1.739,1.739,1.031,2.448,0.0,0.0001,False,EW higher,39.307,23.172,16.135
+Players with 2+ WAR,players_2plus_war,1.468,1.468,0.785,2.152,0.0001,0.0005,False,EW higher,8.286,5.167,3.119
+Pitching K%,pit_K%,1.423,1.423,0.743,2.102,0.0,0.0005,False,EW higher,0.231,0.208,0.023
+Batting WAR (bWAR),bat_WAR,1.376,1.376,0.7,2.052,0.0004,0.0015,False,EW higher,23.2,13.306,9.894
+WHIP,pit_WHIP,-1.33,1.33,-2.003,-0.658,0.0002,,True,CL higher,1.243,1.363,-0.12
+WAR per $10M,war_per_10mm,1.281,1.281,0.613,1.95,0.0003,0.0012,False,EW higher,5.28,3.121,2.159
+K/9,pit_K/9,1.237,1.237,0.572,1.902,0.0003,,True,EW higher,8.751,8.079,0.672
+Team ERA,pit_ERA,-1.23,1.23,-1.894,-0.565,0.0002,0.0009,False,CL higher,3.909,4.579,-0.67
+Team FIP,pit_FIP,-1.217,1.217,-1.88,-0.553,0.0001,0.0009,False,CL higher,3.966,4.396,-0.43
+Pitching WAR (bWAR),pit_WAR,1.092,1.092,0.437,1.747,0.0009,0.003,False,EW higher,16.121,9.878,6.243
+BB/9,pit_BB/9,-1.024,1.024,-1.674,-0.374,0.0037,,True,CL higher,3.051,3.395,-0.344
+Home Runs,bat_HR,0.927,0.927,0.283,1.572,0.0104,0.025,False,EW higher,186.845,161.583,25.262
+Team K%,bat_K%,-0.884,0.884,-1.526,-0.242,0.0084,0.0226,False,CL higher,0.213,0.23,-0.017
+Pitching BB%,pit_BB%,-0.859,0.859,-1.5,-0.219,0.0149,0.0298,False,CL higher,0.081,0.087,-0.006
+WAR Gini (concentration),war_gini,0.825,0.825,0.186,1.464,0.0111,0.025,False,EW higher,0.387,0.331,0.056
+OBP,bat_OBP,0.784,0.784,0.147,1.421,0.0154,0.0298,False,EW higher,0.316,0.307,0.009
+Top-3 WAR Share,top3_war_share,-0.765,0.765,-1.404,-0.126,0.0057,0.017,False,CL higher,0.387,0.514,-0.127
+HR/9 Allowed,pit_HR/9,-0.751,0.751,-1.386,-0.115,0.049,0.0882,False,CL higher,1.109,1.226,-0.117
+OPS,bat_OPS,0.748,0.748,0.113,1.383,0.0283,,True,EW higher,0.719,0.696,0.023
+SLG,bat_SLG,0.669,0.669,0.037,1.3,0.078,0.1316,False,EW higher,0.403,0.389,0.014
+Roster Turnover %,roster_turnover_pct,-0.57,0.57,-1.259,0.118,0.1322,0.204,False,CL higher,0.284,0.349,-0.065
+ISO,bat_ISO,0.511,0.511,-0.114,1.137,0.1534,,True,EW higher,0.155,0.148,0.007
+Exit Velo Allowed,sc_pit_avg_hit_speed,-0.506,0.506,-1.131,0.12,0.2566,0.3054,False,CL higher,88.845,89.137,-0.292
+Barrel % (batting),sc_bat_brl_percent,-0.489,0.489,-1.114,0.136,0.2141,0.289,False,CL higher,7.322,8.034,-0.712
+Stolen Bases,bat_SB,0.469,0.469,-0.155,1.093,0.136,0.204,False,EW higher,133.018,116.049,16.969
+Barrel % Allowed,sc_pit_brl_percent,-0.399,0.399,-1.022,0.223,0.1634,0.2322,False,CL higher,7.887,8.188,-0.301
+Team BB%,bat_BB%,0.393,0.393,-0.229,1.015,0.2602,0.3054,False,EW higher,0.082,0.079,0.003
+PA-Weighted Age,weighted_age,0.356,0.356,-0.282,0.994,0.2337,0.3004,False,EW higher,27.3,26.978,0.322
+Homegrown WAR %,homegrown_war_pct,-0.316,0.316,-0.94,0.307,0.3584,0.4032,False,CL higher,0.567,0.636,-0.069
+Players with Positive WAR,roster_size_positive_war,0.254,0.254,-0.366,0.873,0.6722,0.726,False,EW higher,33.143,31.917,1.226
+Median Age,median_age,0.228,0.228,-0.408,0.864,0.4449,,True,EW higher,27.154,26.958,0.196
+BABIP,bat_BABIP,-0.073,0.073,-0.691,0.544,1.0,1.0,False,CL higher,0.291,0.291,0.0
+Exit Velo (batting),sc_bat_avg_hit_speed,-0.025,0.025,-0.643,0.592,0.8883,0.9225,False,CL higher,88.998,89.022,-0.024
